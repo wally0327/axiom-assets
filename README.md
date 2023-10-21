@@ -46,3 +46,11 @@ Run `deploy-{contract-name}.ts` under scripts folder:
 ```shell
 npx hardhat run scripts/deploy-{contract-name}.ts
 ```
+
+## How to test your contract
+
+Write test cases in the test folder (i.e, `BaseERC721.ts`) and then run:
+
+```shell
+npx hardhat test
+```
