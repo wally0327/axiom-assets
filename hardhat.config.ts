@@ -1,5 +1,7 @@
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
+// hardhat.config.ts
+import '@openzeppelin/hardhat-upgrades';
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -13,6 +15,7 @@ const config: HardhatUserConfig = {
   defaultNetwork: "aries",
   networks: {
     hardhat: {
+      accounts: [{ privateKey: adminPrivateKey, balance: "10000000000000000000000000000000" }],
     },
     aries: {
       url: "https://rpc1.aries.axiomesh.io",
